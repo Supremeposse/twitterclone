@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<section class="content">
+	<header>
+		<img class="logo" src="{% static 'img/logo-twitterblue.svg' %}" alt="" />
+		<h1 class="heading">Home</h1>
+	</header>
+	<section class="post_form">
+		<img class="sample_icon" src="{% static 'img/sample-icon.jpg' %}" alt="" />
+		<div>
+			<form action="/" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="text" name="name" placeholder="Name" required />
+				<textarea
+					name="body"
+					placeholder="Tell us anything"
+					required
+				></textarea>
+				<div class="flex">
+					<input
+						class="upload-file"
+						type="file"
+						value="Choose File"
+						name="image"
+					/>
+					<input type="submit" id="tweet-button" value="Tweet" />
+				</div>
+			</form>
+		</div>
+	</section>
+	<section class="posts">
+		<ul>
+			{% for post in posts %}
+			<li>
+				<img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" />
+				<div class="menu">
+					<a id="editbutton" href="/edit/{{ post.id }}/">Edit</a>
+					<br />
+					<a id="deletebutton" href="/delete/{{ post.id }}/">Delete</a>
+				</div>
+				<div class="logo">
+					<img src="{% static 'img/profile-user.png' %}" />
+				</div>
+				<div class="name_body">
+					<div class="name">{{ post.name }}</div>
+					<div class="datetime">{{ post.created_at }}</div>
+					<p>{{ post.body }}</p>
+					<img class="uploadedimage" src="{{ post.image.url }}" />
+					<div class="like-count flex-container">
+						<a id="{{post.id}}" href="/like/{{ post.id }}">
+							<img src="{% static 'img/heart.png' %}" alt="" />
+						</a>
+						<div class="like">{{post.like_count}} Like</div>
+					</div>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"
+	></script>
+	<script src="{% static 'js/posts.js' %}"></script>
+</section>
+{% endblock %}

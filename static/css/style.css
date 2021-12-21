@@ -1,0 +1,174 @@
+html,
+body {
+	height: 100%;
+}
+
+.content {
+	max-width: 600px;
+	height: 100%;
+	margin: 0 auto;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+header {
+	align-items: center;
+	display: flex;
+}
+
+img.logo {
+	width: 8%;
+}
+
+h1.heading {
+	margin: 0 0 0 3%;
+}
+
+.post_form {
+	padding: 12px 40px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-around;
+}
+
+.editphoto img {
+	width: 50%;
+	padding: 6% 17%;
+}
+
+.post_form input {
+	width: 77%;
+	padding: 2%;
+	background-color: #e6fef7;
+	margin: 2% 0;
+}
+
+.post_form .name {
+	border: 1px solid;
+}
+
+.post_form textarea {
+	width: 76.4%;
+	height: 71px;
+	/* padding: 2% 2%; */
+	/* border: 1px solid; */
+}
+
+.editfooter input {
+	width: 70px;
+	background-color: #209bf0;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	height: 33px;
+	margin: 0 0 0 35%;
+}
+
+.editfooter a {
+	width: 70px;
+	background-color: #209bf0;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	height: 33px;
+	padding: 2%;
+	margin: 0 0 0 16%;
+	text-decoration: none;
+}
+
+.post_form img.sample_icon {
+	height: 34%;
+	width: 12%;
+	border-radius: 46px;
+}
+
+.posts ul {
+	padding: 0;
+}
+
+.posts li .menu_icon {
+	width: 20px;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	top: 18px;
+}
+
+input.upload-file {
+	justify-content: space-between;
+	width: 60%;
+}
+
+#tweet-button {
+	float: right;
+	width: 70px;
+	background-color: #209bf0;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	height: 33px;
+}
+
+.menu a {
+	color: #000;
+}
+
+.posts li .menu {
+	display: block;
+	position: absolute;
+	top: 40px;
+	right: 15px;
+	border: 1px solid #ccc;
+	background-color: white;
+	padding: 1rem 1rem;
+	font-size: 13px;
+	border-radius: 3px;
+	color: rgb(0, 0, 0);
+	line-height: 0.24in;
+}
+
+.uploadedimage {
+	width: 15rem;
+}
+
+.posts li .menu a {
+	text-decoration: none;
+}
+
+.like-count img {
+	width: 5%;
+}
+.posts li {
+	display: flex;
+	border-bottom: 1px solid #ccc;
+	padding: 17px;
+	position: relative;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.posts li .logo {
+	flex-basis: 15%;
+}
+
+.posts li .logo img {
+	width: 60%;
+}
+
+.posts li .name_body {
+	flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+	font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+	color: gray;
+}
+
+@media screen and (max-width: 500px) {
+	.posts li .name_body .name {
+		font-size: 20px;
+	}
+}

@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<section class="content">
+	<header>
+		<img class="logo" src="{% static 'img/logo-twitterblue.svg' %}" alt="" />
+		<h1 class="heading">Home</h1>
+	</header>
+
+	<section class="post_form" style="visibility: visible">
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input
+				type="text"
+				name="name"
+				class="name"
+				placeholder="Name"
+				value="{{edittweet.name}}"
+				required
+				col
+			/>
+			<textarea
+				name="body"
+				rows="2"
+				placeholder="{{edittweet.body}}"
+				required
+			></textarea>
+			<div class="editphoto">
+				<img src="{{edittweet.image.url}}" />
+			</div>
+			<input
+				type="file"
+				name="image"
+				class="upload"
+				value="{{edittweet.image.url}}"
+			/>
+
+			<div class="editfooter">
+				<input type="submit" value="Post" />
+				<a href="{% url 'index' %}">Cancel</a>
+			</div>
+		</form>
+	</section>
+</section>
+
+{% endblock %}
