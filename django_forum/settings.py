@@ -81,13 +81,13 @@ WSGI_APPLICATION = 'django_forum.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    ‘default’: {
-        ‘ENGINE’: ‘django.db.backends.postgresql’,
-        ‘NAME’: ‘dbbekgs2se0563’,
-        ‘USER’: ‘choqszuwjtqjkl’,
-        ‘HOST’: ‘ec2-54-156-24-159.compute-1.amazonaws.com’,
-        ‘PORT’: 5432,
-        ‘PASSWORD’: ‘47515872e4af222dad20e15ff1ac8edac0124a7a5883abb0c52bb1f9f5c72291’,
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dea93g3amakin6',
+        'USER': 'dnkdmcexxoijtv',
+        'HOST': 'ec2-3-232-160-153.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'PASSWORD': 'a1ccf12fc0691d7afa6c553d5f07094d4afcc79af174550e4d05089e88d8f099',
     }
 }
 
