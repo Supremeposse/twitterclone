@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-t9beei)i%qvng$c4#gsgop1nsna%(i9(d1o(-30ontn83@y$o-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,9 +81,13 @@ WSGI_APPLICATION = 'django_forum.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    ‘default’: {
+        ‘ENGINE’: ‘django.db.backends.postgresql’,
+        ‘NAME’: ‘dbbekgs2se0563’,
+        ‘USER’: ‘choqszuwjtqjkl’,
+        ‘HOST’: ‘ec2-54-156-24-159.compute-1.amazonaws.com’,
+        ‘PORT’: 5432,
+        ‘PASSWORD’: ‘47515872e4af222dad20e15ff1ac8edac0124a7a5883abb0c52bb1f9f5c72291’,
     }
 }
 
